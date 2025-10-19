@@ -9,6 +9,7 @@
 	{
 	  public:
 		SensorSuite();
+		bool setup();
 		bool update();
 
 		float temp, pressure;

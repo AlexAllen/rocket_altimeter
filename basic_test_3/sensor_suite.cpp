@@ -18,7 +18,11 @@ SensorSuite::SensorSuite()
   mag[0] = 0.0;
   mag[1] = 0.0;
   mag[2] = 0.0;
-  
+}
+
+
+bool SensorSuite::setup()
+{
   Serial.print("Starting BNO055\n");
   _bno = Adafruit_BNO055(55);
   if(!_bno.begin())
@@ -36,6 +40,7 @@ SensorSuite::SensorSuite()
   }
   Serial.print("BMP280 started successfully\n\n");
 }
+
 
 bool SensorSuite::update()
 {
